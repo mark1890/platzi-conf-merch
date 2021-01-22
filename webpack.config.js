@@ -11,8 +11,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    fallback: { "path": false }
   },
+  node: {fs: 'empty'},
   mode: 'development',
   module: {
     rules: [
