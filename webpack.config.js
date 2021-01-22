@@ -11,8 +11,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    fallback: { "path": false, "fs": false },
   },
-  node: {fs: 'empty'},
   mode: 'development',
   module: {
     rules: [
@@ -36,7 +36,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
-  },
+  }, 
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
