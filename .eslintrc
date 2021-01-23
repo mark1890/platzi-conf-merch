@@ -22,7 +22,7 @@
 			"error",
 			"absolute-first"
 		],
-		"import/newline-after-import": "error"
+		"import/newline-after-import": "error",
 	},
 	"globals": {
 		"window": true,

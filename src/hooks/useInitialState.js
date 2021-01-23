@@ -5,9 +5,20 @@ const useInitialState = () => {
 	const [state, setState] = useState(initialState)
 	
 	const addToCart = payload => {
+		const cartProduct = { ...payload }
+		const cartProducts = [...state.cart]
+
+		cartProduct.id = 1
+		if (state.cart.length > 0) {
+			const lastItem = state.cart.pop()
+			cartProduct.id = parseInt(lastItem.id, 16) + 1
+		}
+		cartProducts.push(cartProduct)
+
+		console.log(state.cart)
 		setState({
 			...state,
-			cart: [...state.cart, payload]
+			cart: [...cartProducts]
 		})
 	}
 

@@ -2,17 +2,13 @@ import React, { useContext } from 'react'
 import { PayPalButton } from 'react-paypal-button'
 import AppContext from '../context/AppContext'
 import '../styles/components/Payment.css'
-import { config } from '../config/index'
-
-const clientId = config.PAYPAL_CLIENTID
 
 const Payment = ({ history }) => {
   const { state, addNewOrder } = useContext(AppContext)
   const { cart, buyer } = state
   
   const paypalOptions = {
-    clientId,
-    intent: 'capture',
+    clientId: 'ARxxa_7FdxLwkkuYxwl842IJjVqD7EHjCzz7nGLQ4FciNoBFJSiap07XEQZkQ4IMXCI1v2TJfHHYBJoc',
     currency: 'USD'
   }
 
